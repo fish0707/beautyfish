@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <!-- ============================================================
+       beauty fish｜Official Website
+       架構：Static HTML → 可直接部署至 GitHub Pages / Vercel / Cloudflare Pages
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── 基礎 SEO ── -->
+  <title>beauty fish｜台中私人美甲工作室｜法式美甲・漸層・客製設計</title>
+  <meta name="description" content="beauty fish 是台中高質感私人美甲工作室，專精法式美甲、單色漸層、造型款與傳圖客製設計，皆含基礎保養。老錢風極簡美甲，LINE 預約：@613mnwmy" />
+  <meta name="keywords" content="台中美甲,台中美甲推薦,法式美甲台中,台中漸層美甲,台中客製美甲,老錢風美甲,台中私人美甲工作室,beauty fish美甲,台中美甲預約,台中凝膠美甲" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="beauty fish Nail Studio" />
+  <link rel="canonical" href="https://beautyfish.nail/" />
+
+  <!-- ── Open Graph (Facebook / LINE 分享預覽) ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="beauty fish｜台中私人美甲工作室" />
+  <meta property="og:description" content="台中高質感私人美甲工作室，法式美甲・單色漸層・傳圖客製。LINE 預約 @613mnwmy" />
+  <meta property="og:image" content="https://beautyfish.nail/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://beautyfish.nail/" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:site_name" content="beauty fish" />
+
+  <!-- ── Twitter Card ── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="beauty fish｜台中私人美甲工作室" />
+  <meta name="twitter:description" content="台中高質感私人美甲工作室，法式美甲・單色漸層・傳圖客製。LINE 預約 @613mnwmy" />
+  <meta name="twitter:image" content="https://beautyfish.nail/og-cover.jpg" />
+
+  <!-- ── JSON-LD 結構化資料：LocalBusiness / BeautySalon ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["BeautySalon", "LocalBusiness"],
+    "name": "beauty fish",
+    "alternateName": "beauty fish 美甲工作室",
+    "description": "台中高質感私人美甲工作室，提供法式美甲、單色漸層、造型款設計、傳圖客製設計，皆含基礎保養，LINE 預約制。",
+    "url": "https://beautyfish.nail/",
+    "image": "https://beautyfish.nail/og-cover.jpg",
+    "logo": "https://beautyfish.nail/logo.png",
+    "priceRange": "$1200–$2200",
+    "currenciesAccepted": "TWD",
+    "paymentAccepted": "Cash, LINE Pay, Transfer",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "台中市",
+      "addressRegion": "台中",
+      "addressCountry": "TW"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 24.1477,
+      "longitude": 120.6736
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "台中市"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Reservations",
+      "url": "https://line.me/R/ti/p/@613mnwmy",
+      "contactOption": "TollFree",
+      "availableLanguage": ["Chinese", "Taiwanese"]
+    },
+    "sameAs": [
+      "https://line.me/R/ti/p/@613mnwmy"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "美甲服務項目",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "單色漸層" },
+          "price": "1600",
+          "priceCurrency": "TWD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "法式美甲（無底色）" },
+          "price": "1700",
+          "priceCurrency": "TWD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "造型款設計" },
+          "price": "1400",
+          "priceCurrency": "TWD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "傳圖客製設計" },
+          "price": "2000",
+          "priceCurrency": "TWD"
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- ── Breadcrumb JSON-LD ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://beautyfish.nail/" },
+      { "@type": "ListItem", "position": 2, "name": "美甲服務", "item": "https://beautyfish.nail/#services" },
+      { "@type": "ListItem", "position": 3, "name": "預約須知", "item": "https://beautyfish.nail/#notice" }
+    ]
+  }
+  </script>
+
+  <!-- ── Tailwind CSS CDN ── -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ── Google Fonts：Cormorant Garamond + DM Sans ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+
+  <!-- ── Tailwind 客製化設定 ── -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            parchment: '#F9F8F6',
+            oat:       '#E5E0D8',
+            linen:     '#D4CBC0',
+            mink:      '#9A8F84',
+            bark:      '#6B5F54',
+            umber:     '#4A3F35',
+            charcoal:  '#2C2824',
+            warm:      '#7D6B5A',
+            cream:     '#F4EDE6',
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans:  ['DM Sans', 'sans-serif'],
+          },
+          animation: {
+            'fade-up':   'fadeUp 0.6s ease both',
+            'fade-in':   'fadeIn 0.5s ease both',
+            'slide-in':  'slideIn 0.4s ease both',
+            'shimmer':   'shimmer 2.5s infinite',
+          },
+          keyframes: {
+            fadeUp:  { from: { opacity: 0, transform: 'translateY(20px)' }, to: { opacity: 1, transform: 'translateY(0)' } },
+            fadeIn:  { from: { opacity: 0 }, to: { opacity: 1 } },
+            slideIn: { from: { opacity: 0, transform: 'translateX(-12px)' }, to: { opacity: 1, transform: 'translateX(0)' } },
+            shimmer: { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* ── CSS 變數系統 ── */
+    :root {
+      --c-bg:        #F2EDE7;
+      --c-card:      #F9F8F6;
+      --c-oat:       #E5E0D8;
+      --c-linen:     #D4CBC0;
+      --c-mink:      #9A8F84;
+      --c-bark:      #6B5F54;
+      --c-umber:     #4A3F35;
+      --c-charcoal:  #2C2824;
+      --transition:  0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ── 基礎排版 ── */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--c-bg);
+      font-family: 'DM Sans', sans-serif;
+      color: var(--c-charcoal);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── 捲軸美化 ── */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--c-bg); }
+    ::-webkit-scrollbar-thumb { background: var(--c-linen); border-radius: 2px; }
+
+    /* ── 主容器：模擬手機居中展示 ── */
+    .page-shell {
+      max-width: 430px;
+      margin: 0 auto;
+      background: var(--c-bg);
+      min-height: 100vh;
+      box-shadow: 0 0 60px rgba(44,40,36,0.08);
+    }
+
+    /* ── 頂部導覽列 ── */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(242,237,231,0.88);
+      border-bottom: 1px solid rgba(212,203,192,0.5);
+    }
+
+    /* ── Hero Banner ── */
+    .hero-section {
+      position: relative;
+      height: 480px;
+      overflow: hidden;
+    }
+    .hero-bg {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      /* 圖片路徑：請替換成實際素材 hero.jpg */
+      background: linear-gradient(145deg,
+        #C8BDB4 0%, #B5A89C 25%,
+        #A39487 50%, #8E7F72 75%,
+        #7A6C60 100%);
+    }
+    .hero-grain {
+      position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      mix-blend-mode: multiply;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        170deg,
+        rgba(44,40,36,0.25) 0%,
+        rgba(74,63,53,0.60) 60%,
+        rgba(44,40,36,0.80) 100%
+      );
+    }
+    .hero-content {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: flex-end;
+      padding-bottom: 3rem;
+      text-align: center;
+    }
+
+    /* ── 服務卡片 ── */
+    .service-card {
+      background: var(--c-card);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(212,203,192,0.6);
+      box-shadow: 0 2px 16px rgba(44,40,36,0.06);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(44,40,36,0.13);
+    }
+    .card-thumb {
+      height: 180px;
+      position: relative;
+      overflow: hidden;
+    }
+    .card-thumb img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .service-card:hover .card-thumb img {
+      transform: scale(1.04);
+    }
+    /* 圖片未載入時的漸層佔位 */
+    .card-thumb::before {
+      content: '';
+      position: absolute; inset: 0;
+      z-index: 0;
+    }
+
+    /* ── LINE 按鈕 ── */
+    .btn-line {
+      display: block; width: 100%;
+      background: var(--c-umber);
+      color: #fff;
+      text-align: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background var(--transition), letter-spacing var(--transition), transform 0.15s ease;
+    }
+    .btn-line:hover {
+      background: var(--c-charcoal);
+      letter-spacing: 0.28em;
+    }
+    .btn-line:active { transform: scale(0.98); }
+
+    /* ── 主要 LINE 按鈕（置頂浮動版） ── */
+    .btn-line-primary {
+      background: #06C755; /* LINE 官方綠 */
+      display: flex; align-items: center; justify-content: center;
+      gap: 8px;
+      padding: 14px 24px;
+      border-radius: 50px;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(6,199,85,0.35);
+      transition: all var(--transition);
+    }
+    .btn-line-primary:hover {
+      background: #05B34C;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(6,199,85,0.4);
+    }
+
+    /* ── 附加服務列表 ── */
+    .addon-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(212,203,192,0.5);
+      font-size: 13px;
+    }
+    .addon-row:last-child { border-bottom: none; }
+
+    /* ── 預約須知 ── */
+    .notice-box {
+      background: linear-gradient(135deg, #F5EEE7 0%, #EDE4D9 100%);
+      border: 1px solid rgba(180,162,144,0.4);
+      border-radius: 16px;
+    }
+    .notice-item-row {
+      display: flex; gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(212,203,192,0.4);
+      animation: var(--tw-animation, none);
+    }
+    .notice-item-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .notice-num {
+      width: 22px; height: 22px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--c-bark);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 500;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 1px;
+    }
+
+    /* ── 會員表單 Modal ── */
+    .modal-backdrop {
+      position: fixed; inset: 0;
+      background: rgba(44,40,36,0.6);
+      backdrop-filter: blur(6px);
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-backdrop.active { display: flex; }
+    .modal-box {
+      background: var(--c-card);
+      border-radius: 20px;
+      padding: 32px 24px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 24px 64px rgba(44,40,36,0.25);
+      animation: fadeUp 0.35s ease both;
+    }
+    .form-input {
+      width: 100%;
+      background: var(--c-bg);
+      border: 1px solid var(--c-linen);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      color: var(--c-charcoal);
+      outline: none;
+      transition: border-color var(--transition), box-shadow var(--transition);
+      appearance: none;
+    }
+    .form-input:focus {
+      border-color: var(--c-bark);
+      box-shadow: 0 0 0 3px rgba(107,95,84,0.12);
+    }
+    .form-label {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--c-mink);
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    /* ── 浮動 LINE 按鈕 ── */
+    .fab-line {
+      position: fixed;
+      bottom: 24px; right: 50%;
+      transform: translateX(50%);
+      z-index: 40;
+      max-width: 380px;
+      width: calc(100% - 40px);
+    }
+
+    /* ── Section 標題 ── */
+    .section-title-wrap {
+      display: flex; align-items: center; gap: 16px;
+      margin-bottom: 20px;
+    }
+    .section-title-wrap .line { flex: 1; height: 1px; background: var(--c-linen); }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--c-bark);
+      letter-spacing: 0.1em;
+      white-space: nowrap;
+    }
+
+    /* ── 標籤徽章 ── */
+    .badge {
+      display: inline-block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 2px 10px;
+      background: rgba(44,40,36,0.55);
+      color: rgba(255,255,255,0.85);
+      border-radius: 2px;
+      backdrop-filter: blur(4px);
+    }
+
+    /* ── 頁面進場動畫 ── */
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    [data-animate].visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── 成功訊息 ── */
+    .toast {
+      position: fixed; top: 20px; left: 50%;
+      transform: translateX(-50%) translateY(-80px);
+      background: var(--c-charcoal);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      padding: 12px 24px;
+      border-radius: 50px;
+      z-index: 200;
+      transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
+      white-space: nowrap;
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); }
+  </style>
+</head>
+
+<body>
+<!-- ============================================================
+     頁面主容器（max-width 模擬手機畫面）
+     ============================================================ -->
+<div class="page-shell">
+
+  <!-- ════════════════════════════════════════
+       ① 頂部導覽列
+       ════════════════════════════════════════ -->
+  <nav class="top-nav px-5 py-3 flex items-center justify-between">
+    <a href="#" class="font-serif text-lg font-light tracking-[0.2em] text-charcoal italic">
+      beauty fish
+    </a>
+    <a href="https://line.me/R/ti/p/@613mnwmy"
+       target="_blank" rel="noopener"
+       class="flex items-center gap-1.5 text-xs font-sans tracking-widest uppercase text-bark border border-bark/40 rounded-full px-4 py-1.5 hover:bg-bark hover:text-white transition-all duration-300">
+      <!-- LINE Icon SVG -->
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19.952 12.418C19.952 8.007 15.49 4.42 12 4.42c-3.49 0-7.952 3.587-7.952 7.998 0 3.94 3.492 7.23 8.215 7.908.32.069.755.21.865.483.099.247.065.634.032.883l-.14.84c-.043.247-.198.967.847.527 1.045-.44 5.637-3.32 7.692-5.685 1.42-1.558 2.293-3.14 2.293-4.956z"/>
+      </svg>
+      立即預約
+    </a>
+  </nav>
+
+
+  <!-- ════════════════════════════════════════
+       ② Hero Banner 區塊
+       ════════════════════════════════════════ -->
+  <header class="hero-section" id="top">
+    <!-- 替換：<img src="hero.jpg" alt="beauty fish 工作室環境" class="hero-bg"> -->
+    <!-- 佔位背景（部署後替換成實際圖片） -->
+    <div class="hero-bg">
+      <!-- 裝飾性幾何層 -->
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
+        <div style="width:260px;height:260px;border-radius:50%;border:1px solid rgba(255,255,255,0.1);"></div>
+        <div style="position:absolute;width:340px;height:340px;border-radius:50%;border:1px solid rgba(255,255,255,0.06);"></div>
+        <div style="position:absolute;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.05),transparent);"></div>
+      </div>
+    </div>
+    <div class="hero-grain"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <!-- 裝飾線 -->
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <div style="width:40px;height:1px;background:rgba(255,255,255,0.35);"></div>
+        <span class="badge">Private Nail Studio · Taichung</span>
+        <div style="width:40px;height:1px;background:rgba(255,255,255,0.35);"></div>
+      </div>
+      <!-- 主標題 -->
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;letter-spacing:0.25em;color:#fff;line-height:1;margin-bottom:8px;">
+        beauty fish
+      </h1>
+      <!-- Tagline -->
+      <p style="font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.35em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:28px;">
+        Refined Nails · Est. 2024
+      </p>
+      <!-- 主要 CTA -->
+      <a href="https://line.me/R/ti/p/@613mnwmy"
+         target="_blank" rel="noopener"
+         class="btn-line-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.952 12.418C19.952 8.007 15.49 4.42 12 4.42c-3.49 0-7.952 3.587-7.952 7.998 0 3.94 3.492 7.23 8.215 7.908.32.069.755.21.865.483.099.247.065.634.032.883l-.14.84c-.043.247-.198.967.847.527 1.045-.44 5.637-3.32 7.692-5.685 1.42-1.558 2.293-3.14 2.293-4.956z"/>
+        </svg>
+        加入 LINE 立即預約
+      </a>
+      <!-- 裝飾底部 -->
+      <div style="display:flex;align-items:center;gap:8px;margin-top:20px;opacity:0.35;">
+        <div style="width:20px;height:1px;background:#fff;"></div>
+        <div style="width:4px;height:4px;border-radius:50%;background:#fff;"></div>
+        <div style="width:20px;height:1px;background:#fff;"></div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ════════════════════════════════════════
+       主要內容區
+       ════════════════════════════════════════ -->
+  <main style="padding: 28px 16px 120px;">
+
+    <!-- ── SEO 隱藏 H2（幫助搜尋引擎理解頁面主題） ── -->
+    <h2 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">
+      台中美甲推薦｜beauty fish 私人美甲工作室｜法式美甲・漸層・客製設計
+    </h2>
+
+
+    <!-- ════════════════════════════════════════
+         ③ 主力服務卡片區塊
+         id="services" 供 JSON-LD 與錨點使用
+         ════════════════════════════════════════ -->
+    <section id="services" style="margin-bottom:36px;">
+      <div class="section-title-wrap" data-animate>
+        <div class="line"></div>
+        <h3 class="section-title">Services</h3>
+        <div class="line"></div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:16px;">
+
+        <!-- ── 卡片 1：單色漸層 ── -->
+        <article class="service-card" data-animate style="transition-delay:0.05s">
+          <div class="card-thumb" style="background:linear-gradient(135deg,#D4CBC0,#B8AD9F);">
+            <!-- 替換：<img src="ombre.jpg" alt="台中單色漸層美甲" loading="lazy"> -->
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:36px;font-style:italic;color:rgba(255,255,255,0.25);letter-spacing:0.15em;">ombré</span>
+            </div>
+            <div style="position:absolute;top:12px;left:12px;"><span class="badge" style="background:rgba(44,40,36,0.5);">Signature</span></div>
+          </div>
+          <div style="padding:18px;">
+            <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:6px;">
+              <h4 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:#2C2824;letter-spacing:0.05em;">單色漸層</h4>
+              <span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#6B5F54;">$1,600</span>
+            </div>
+            <p style="font-size:12px;color:#9A8F84;line-height:1.7;margin-bottom:14px;">
+              含基礎保養。細膩的漸層工藝，色彩如霧氣般自然過渡，呈現如底片般的柔焦質感，適合追求低調優雅的妳。
+            </p>
+            <a href="https://line.me/R/oaMessage/@613mnwmy/?妳好，我想詢問關於 單色漸層美甲" class="btn-line">LINE 立即詢問</a>
+          </div>
+        </article>
+
+        <!-- ── 卡片 2：法式美甲 ── -->
+        <article class="service-card" data-animate style="transition-delay:0.1s">
+          <div class="card-thumb" style="background:linear-gradient(135deg,#C5BDB3,#A9A096);">
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:36px;font-style:italic;color:rgba(255,255,255,0.25);letter-spacing:0.15em;">french</span>
+            </div>
+            <div style="position:absolute;top:12px;left:12px;"><span class="badge" style="background:rgba(44,40,36,0.5);">Classic</span></div>
+          </div>
+          <div style="padding:18px;">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px;">
+              <h4 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:#2C2824;letter-spacing:0.05em;">法式美甲</h4>
+              <div style="text-align:right;">
+                <div style="font-size:12px;color:#9A8F84;">無底色 <span style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#6B5F54;font-weight:300;">$1,700</span></div>
+                <div style="font-size:12px;color:#9A8F84;">有底色 <span style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#6B5F54;font-weight:300;">$1,900</span></div>
+              </div>
+            </div>
+            <p style="font-size:12px;color:#9A8F84;line-height:1.7;margin-bottom:14px;">
+              含基礎保養。經典法式弧線，無底色純淨俐落，有底色層次更豐富。台中法式美甲預約制，老錢風首選。
+            </p>
+            <a href="https://line.me/R/oaMessage/@613mnwmy/?妳好，我想詢問關於 法式美甲" class="btn-line">LINE 立即詢問</a>
+          </div>
+        </article>
+
+        <!-- ── 卡片 3：造型款設計 ── -->
+        <article class="service-card" data-animate style="transition-delay:0.15s">
+          <div class="card-thumb" style="background:linear-gradient(135deg,#B8AFA5,#9E938A);">
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:36px;font-style:italic;color:rgba(255,255,255,0.25);letter-spacing:0.15em;">design</span>
+            </div>
+            <div style="position:absolute;top:12px;left:12px;"><span class="badge" style="background:rgba(44,40,36,0.5);">Popular</span></div>
+          </div>
+          <div style="padding:18px;">
+            <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:6px;">
+              <h4 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:#2C2824;letter-spacing:0.05em;">造型款設計</h4>
+              <span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#6B5F54;">$1,400 起</span>
+            </div>
+            <p style="font-size:12px;color:#9A8F84;line-height:1.7;margin-bottom:14px;">
+              含基礎保養。2 指暈染 + 8 指單色 $1,400，3 指暈染 + 7 指單色 $1,500。不含造型及調色。台中美甲造型款推薦。
+            </p>
+            <a href="https://line.me/R/oaMessage/@613mnwmy/?妳好，我想詢問關於 造型款美甲設計" class="btn-line">LINE 立即詢問</a>
+          </div>
+        </article>
+
+        <!-- ── 卡片 4：傳圖客製設計 ── -->
+        <article class="service-card" data-animate style="transition-delay:0.2s">
+          <div class="card-thumb" style="background:linear-gradient(135deg,#A8A09A,#8E8680);">
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:36px;font-style:italic;color:rgba(255,255,255,0.25);letter-spacing:0.15em;">bespoke</span>
+            </div>
+            <div style="position:absolute;top:12px;left:12px;"><span class="badge" style="background:rgba(44,40,36,0.5);">Custom</span></div>
+          </div>
+          <div style="padding:18px;">
+            <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:6px;">
+              <h4 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:#2C2824;letter-spacing:0.05em;">傳圖客製設計</h4>
+              <span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#6B5F54;">$2,000 起</span>
+            </div>
+            <p style="font-size:12px;color:#9A8F84;line-height:1.7;margin-bottom:14px;">
+              含基礎保養。依圖報價，最多三款為限。台中客製美甲、傳圖設計美甲，為你量身打造專屬指尖。
+            </p>
+            <a href="https://line.me/R/oaMessage/@613mnwmy/?妳好，我想詢問關於 傳圖客製美甲設計" class="btn-line">LINE 立即詢問</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════
+         ④ 卸甲與附加服務列表
+         ════════════════════════════════════════ -->
+    <section id="addons" style="margin-bottom:36px;" data-animate>
+      <div class="section-title-wrap">
+        <div class="line"></div>
+        <h3 class="section-title">Add-ons</h3>
+        <div class="line"></div>
+      </div>
+
+      <div style="background:#F9F8F6;border-radius:16px;padding:20px;border:1px solid rgba(212,203,192,0.6);box-shadow:0 2px 12px rgba(44,40,36,0.05);">
+
+        <!-- 卸甲 -->
+        <p style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#7D6B5A;font-weight:500;margin-bottom:8px;">卸甲服務</p>
+        <div class="addon-row">
+          <span style="color:#2C2824;font-size:13px;">我家卸甲續作</span>
+          <span style="color:#6B5F54;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;">$200</span>
+        </div>
+        <div class="addon-row">
+          <span style="color:#2C2824;font-size:13px;">他店卸甲續作 <small style="color:#9A8F84;">(難卸 +$150)</small></span>
+          <span style="color:#6B5F54;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;">$300</span>
+        </div>
+        <div class="addon-row" style="margin-bottom:16px;">
+          <span style="color:#2C2824;font-size:13px;">我家單卸甲 <small style="color:#9A8F84;">(不接他店)</small></span>
+          <span style="color:#6B5F54;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;">$800</span>
+        </div>
+
+        <!-- 延甲飾品 -->
+        <p style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#7D6B5A;font-weight:500;margin-bottom:8px;">延甲 · 飾品</p>
+        <div class="addon-row">
+          <span style="color:#2C2824;font-size:13px;">延甲（最多兩指）</span>
+          <span style="color:#6B5F54;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;">$150 / 指</span>
+        </div>
+        <div class="addon-row" style="margin-bottom:16px;">
+          <span style="color:#2C2824;font-size:13px;">卸鑽、飾品 <small style="color:#9A8F84;">(請事先告知)</small></span>
+          <span style="color:#6B5F54;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;">+$200</span>
+        </div>
+
+        <!-- 特殊加購 -->
+        <p style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#7D6B5A;font-weight:500;margin-bottom:8px;">特殊加購</p>
+        <div class="addon-row">
+          <span style="color:#2C2824;font-size:13px;">調色</span>
+          <span style="color:#6B5F54;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;">+$100</span>
+        </div>
+        <div class="addon-row">
+          <span style="color:#2C2824;font-size:13px;">上翹甲、甲型彎曲</span>
+          <span style="color:#6B5F54;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;">+$200</span>
+        </div>
+        <div class="addon-row" style="margin-bottom:16px;">
+          <span style="color:#2C2824;font-size:13px;">超短甲（指甲齊肉）</span>
+          <span style="color:#6B5F54;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;">+$100</span>
+        </div>
+
+        <!-- 補甲政策 -->
+        <p style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#7D6B5A;font-weight:500;margin-bottom:8px;">補甲政策</p>
+        <div style="background:rgba(242,237,231,0.8);border-radius:8px;padding:12px 14px;">
+          <p style="font-size:12px;color:#4A3F35;line-height:1.8;">
+            施作後 <strong style="color:#6B5F54;">5 天內免費補</strong>（從施作當天起算）。<br/>
+            前端磨損、缺角、掉落不在補甲範圍。<br/>
+            逾 5 天：單指補色 $150，補重染另計。
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════
+         ⑤ 預約須知 Notice
+         id="notice" 供 JSON-LD 錨點使用
+         ════════════════════════════════════════ -->
+    <section id="notice" style="margin-bottom:36px;" data-animate>
+      <div class="section-title-wrap">
+        <div class="line"></div>
+        <h3 class="section-title">預約須知</h3>
+        <div class="line"></div>
+      </div>
+
+      <div class="notice-box" style="padding:20px 20px 16px;">
+
+        <!-- 警示 Header -->
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid rgba(212,203,192,0.5);">
+          <div style="width:32px;height:32px;border-radius:50%;background:rgba(107,95,84,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B5F54" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/>
+            </svg>
+          </div>
+          <p style="font-size:12px;color:#4A3F35;font-weight:500;">請在預約前詳閱以下規範，謝謝配合 🙏</p>
+        </div>
+
+        <!-- 須知列表 -->
+        <div>
+
+          <div class="notice-item-row">
+            <div class="notice-num">1</div>
+            <p style="font-size:12px;color:#4A3F35;line-height:1.75;">
+              請<strong>準時到即可，勿提早到</strong>。
+            </p>
+          </div>
+
+          <div class="notice-item-row">
+            <div class="notice-num">2</div>
+            <p style="font-size:12px;color:#4A3F35;line-height:1.75;">
+              預約保留 <strong>5 分鐘</strong>，逾時將直接取消當日預約，<strong>定金不退還</strong>。不接受塞車、迷路、找停車位等理由，請提早出門。
+            </p>
+          </div>
+
+          <div class="notice-item-row">
+            <div class="notice-num">3</div>
+            <p style="font-size:12px;color:#4A3F35;line-height:1.75;">
+              逾時 6–10 分鐘內若堅持施作，為避免影響下一位客人，款式將由我們決定改為<strong>全暈染 $2,200</strong>，顏色由我們決定。
+            </p>
+          </div>
+
+          <div class="notice-item-row">
+            <div class="notice-num">4</div>
+            <p style="font-size:12px;color:#4A3F35;line-height:1.75;">
+              取消過再預約者（需審核），須先繳付定金 <strong>$1,000</strong>；再次取消或更改時間，定金不退還。
+            </p>
+          </div>
+
+          <div class="notice-item-row">
+            <div class="notice-num">5</div>
+            <p style="font-size:12px;color:#4A3F35;line-height:1.75;">
+              詢問、報價達 <strong>三次（含）</strong>仍未預約，或已讀 / 不讀不回，之後訊息不再回覆。
+            </p>
+          </div>
+
+          <div class="notice-item-row" style="border-bottom:none;">
+            <div class="notice-num">6</div>
+            <p style="font-size:12px;color:#4A3F35;line-height:1.75;">
+              本網頁與官方 LINE 已說明之資訊，若再詢問將不予回覆。
+            </p>
+          </div>
+
+        </div>
+
+        <!-- 感謝語 -->
+        <div style="margin-top:16px;padding-top:14px;border-top:1px solid rgba(212,203,192,0.5);text-align:center;">
+          <p style="font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:#9A8F84;letter-spacing:0.1em;">
+            感謝您的理解，期待為您服務 ✦
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════
+         ⑥ 加入會員表單入口
+         ════════════════════════════════════════ -->
+    <section id="member" style="margin-bottom:36px;" data-animate>
+      <div style="background:linear-gradient(135deg,#4A3F35,#2C2824);border-radius:16px;padding:28px 20px;text-align:center;position:relative;overflow:hidden;">
+        <!-- 裝飾圓形 -->
+        <div style="position:absolute;top:-30px;right:-30px;width:140px;height:140px;border-radius:50%;border:1px solid rgba(255,255,255,0.06);pointer-events:none;"></div>
+        <div style="position:absolute;bottom:-20px;left:-20px;width:100px;height:100px;border-radius:50%;border:1px solid rgba(255,255,255,0.04);pointer-events:none;"></div>
+
+        <p style="font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:8px;">Membership</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:#fff;letter-spacing:0.1em;margin-bottom:8px;">
+          加入會員名單
+        </h3>
+        <p style="font-size:12px;color:rgba(255,255,255,0.5);line-height:1.7;margin-bottom:20px;">
+          留下您的 LINE ID 與想預約的服務項目，<br/>老闆將優先主動聯繫會員名單中的朋友。
+        </p>
+        <button onclick="openModal()"
+          style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:#fff;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;padding:12px 28px;border-radius:50px;cursor:pointer;transition:all 0.3s ease;"
+          onmouseover="this.style.background='rgba(255,255,255,0.2)'"
+          onmouseout="this.style.background='rgba(255,255,255,0.12)'">
+          填寫預約表單
+        </button>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════
+         ⑦ Footer
+         ════════════════════════════════════════ -->
+    <footer style="text-align:center;padding-top:8px;">
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+        <div style="flex:1;height:1px;background:#D4CBC0;"></div>
+        <div style="width:4px;height:4px;border-radius:50%;background:#9A8F84;"></div>
+        <div style="flex:1;height:1px;background:#D4CBC0;"></div>
+      </div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;letter-spacing:0.25em;color:#6B5F54;font-style:italic;margin-bottom:4px;">
+        beauty fish
+      </p>
+      <p style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#9A8F84;margin-bottom:12px;">
+        Private Nail Studio · Taichung, Taiwan
+      </p>
+      <a href="https://line.me/R/ti/p/@613mnwmy" target="_blank" rel="noopener"
+         style="font-size:11px;color:#9A8F84;text-decoration:none;letter-spacing:0.1em;">
+        LINE @613mnwmy
+      </a>
+      <p style="font-size:10px;color:#C4B9AC;margin-top:12px;">
+        © 2025 beauty fish. All rights reserved.
+      </p>
+    </footer>
+
+  </main><!-- /main -->
+</div><!-- /page-shell -->
+
+
+<!-- ════════════════════════════════════════
+     會員表單 Modal
+     ════════════════════════════════════════ -->
+<div class="modal-backdrop" id="memberModal" onclick="handleBackdropClick(event)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+
+    <!-- Modal Header -->
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
+      <div>
+        <p style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#9A8F84;margin-bottom:2px;">Membership</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:#2C2824;letter-spacing:0.05em;">填寫預約資訊</h3>
+      </div>
+      <button onclick="closeModal()"
+        style="width:32px;height:32px;border-radius:50%;background:#F2EDE7;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#9A8F84;font-size:18px;line-height:1;">
+        ×
+      </button>
+    </div>
+
+    <!-- 表單 -->
+    <form id="memberForm" onsubmit="submitForm(event)" style="display:flex;flex-direction:column;gap:14px;">
+
+      <div>
+        <label class="form-label" for="f_name">姓名 *</label>
+        <input class="form-input" type="text" id="f_name" name="name" placeholder="您的姓名" required />
+      </div>
+
+      <div>
+        <label class="form-label" for="f_line">LINE ID *</label>
+        <input class="form-input" type="text" id="f_line" name="lineId" placeholder="例：@yourlineid" required />
+      </div>
+
+      <div>
+        <label class="form-label" for="f_service">想預約的服務 *</label>
+        <select class="form-input" id="f_service" name="service" required>
+          <option value="" disabled selected>請選擇服務項目</option>
+          <option value="單色漸層 $1,600">單色漸層 $1,600</option>
+          <option value="法式美甲（無底色）$1,700">法式美甲（無底色）$1,700</option>
+          <option value="法式美甲（有底色）$1,900">法式美甲（有底色）$1,900</option>
+          <option value="造型款設計 $1,400起">造型款設計 $1,400起</option>
+          <option value="傳圖客製設計 $2,000起">傳圖客製設計 $2,000起</option>
+          <option value="尚未決定">尚未決定，想先詢問</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="form-label" for="f_note">備註</label>
+        <textarea class="form-input" id="f_note" name="note" rows="2" placeholder="例：想加延甲、有特殊甲型等…" style="resize:none;"></textarea>
+      </div>
+
+      <!-- 送出按鈕 -->
+      <button type="submit" id="submitBtn"
+        style="width:100%;background:#4A3F35;color:#fff;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;padding:13px;border-radius:8px;border:none;cursor:pointer;transition:background 0.3s ease;"
+        onmouseover="this.style.background='#2C2824'"
+        onmouseout="this.style.background='#4A3F35'">
+        送出資料
+      </button>
+
+      <p style="font-size:10px;color:#9A8F84;text-align:center;line-height:1.6;">
+        資料僅供 beauty fish 內部使用，不會提供給第三方。
+      </p>
+    </form>
+
+  </div>
+</div>
+
+<!-- Toast 通知 -->
+<div class="toast" id="toast">✦ 資料已送出，老闆將盡快與您聯繫！</div>
+
+
+<!-- ============================================================
+     JavaScript：表單送出（GAS Webhook）+ Scroll 動畫
+     ============================================================ -->
+<script>
+// ── GAS Webhook 端點
+// ！部署 Code.gs 後，將 URL 替換到此處
+const GAS_WEBHOOK_URL =' https://script.google.com/macros/s/AKfycbyZ8tO3VuLU47KZovc537eP3oMAruYuoVTHY6i_GNfpfMS1uRDkEV8mwp2EAIlRHgczwA/exec';
+
+// ── Modal 控制 ──
+function openModal() {
+  document.getElementById('memberModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('memberModal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+function handleBackdropClick(e) {
+  if (e.target === document.getElementById('memberModal')) closeModal();
+}
+
+// ── Toast 通知 ──
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  if (msg) t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3500);
+}
+
+// ── 表單送出（POST → GAS Webhook）──
+async function submitForm(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  btn.textContent = '送出中…';
+  btn.disabled = true;
+
+  const formData = {
+    name:    document.getElementById('f_name').value.trim(),
+    lineId:  document.getElementById('f_line').value.trim(),
+    service: document.getElementById('f_service').value,
+    note:    document.getElementById('f_note').value.trim(),
+    source:  'beauty fish 官網',
+    timestamp: new Date().toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' })
+  };
+
+  try {
+    // GAS Webhook 採用 no-cors 模式（GAS 不支援完整 CORS preflight 時的備援）
+    const response = await fetch(GAS_WEBHOOK_URL, {
+      method:  'POST',
+      mode:    'no-cors', // GAS 需要此設定
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify(formData)
+    });
+
+    // no-cors 模式下 response.type === 'opaque'，視為成功
+    closeModal();
+    showToast('✦ 資料已送出，老闆將盡快與您聯繫！');
+    document.getElementById('memberForm').reset();
+
+  } catch (err) {
+    console.error('送出失敗：', err);
+    showToast('⚠ 送出失敗，請直接透過 LINE 聯絡我們');
+  } finally {
+    btn.textContent = '送出資料';
+    btn.disabled = false;
+  }
+}
+
+// ── Scroll 進場動畫（IntersectionObserver）──
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+});
+
+// ── ESC 關閉 Modal ──
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
+</script>
+
+</body>
+</html>
