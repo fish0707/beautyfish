@@ -172,58 +172,58 @@
     <div style="display:flex;flex-direction:column;gap:10px;" id="svcList">
 
       <!-- 單色漸層 -->
-      <div class="svc-card" onclick="selectService(this,'單色漸層',1600,null)" data-name="單色漸層" data-price="1600">
+      <div class="svc-card" onclick="selectService(this,'單色／漸層',600,null)" data-name="單色／漸層" data-price="600">
         <img src="ombre.jpg" class="svc-thumb" alt="單色漸層" onerror="this.style.display='none'">
         <div style="flex:1;">
           <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;">
-            <span style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;color:#2C2824;">單色漸層</span>
-            <span class="price-tag">$1,600</span>
+            <span style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;color:#2C2824;">單色／漸層</span>
+            <span class="price-tag">$600</span>
           </div>
-          <p style="font-size:11px;color:#9A8F84;line-height:1.6;">含基礎保養・約 2 小時</p>
+          <p style="font-size:11px;color:#9A8F84;line-height:1.6;">含基礎保養・可跳色／鏡面／貓眼・約 2 小時</p>
         </div>
         <div class="svc-radio"></div>
       </div>
 
       <!-- 法式美甲 -->
-      <div class="svc-card" onclick="selectService(this,'法式美甲',0,'french')" data-name="法式美甲" data-price="0" data-sub="french">
+      <div class="svc-card" onclick="selectService(this,'鏡面／貓眼／法式美甲',0,'french')" data-name="法式美甲" data-price="0" data-sub="french">
         <img src="french.jpg" class="svc-thumb" alt="法式美甲" onerror="this.style.display='none'">
         <div style="flex:1;">
           <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;">
-            <span style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;color:#2C2824;">法式美甲</span>
-            <span class="price-tag">$1,700起</span>
+            <span style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;color:#2C2824;">鏡面／貓眼／法式美甲</span>
+            <span class="price-tag">$800起</span>
           </div>
           <p style="font-size:11px;color:#9A8F84;line-height:1.6;">含基礎保養・約 2 小時</p>
           <!-- 子選項 -->
           <div class="sub-option" id="subFrench" style="display:none;">
-            <div class="sub-btn" onclick="selectSub(event,'無底色',1700)">無底色 $1,700</div>
-            <div class="sub-btn" onclick="selectSub(event,'有底色',1900)">有底色 $1,900</div>
+            <div class="sub-btn" onclick="selectSub(event,'無底色',800)">無底色 $800</div>
+            <div class="sub-btn" onclick="selectSub(event,'有底色',900)">有底色 $900</div>
           </div>
         </div>
         <div class="svc-radio"></div>
       </div>
 
       <!-- 造型款設計 -->
-      <div class="svc-card" onclick="selectService(this,'造型款設計',1400,null)" data-name="造型款設計" data-price="1400">
+      <div class="svc-card" onclick="selectService(this,'造型款設計',1100,null)" data-name="造型款設計" data-price="1400">
         <img src="design.jpg" class="svc-thumb" alt="造型款設計" onerror="this.style.display='none'">
         <div style="flex:1;">
           <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;">
             <span style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;color:#2C2824;">造型款設計</span>
-            <span class="price-tag">$1,400起</span>
+            <span class="price-tag">$1,100起</span>
           </div>
-          <p style="font-size:11px;color:#9A8F84;line-height:1.6;">含基礎保養・約 2.5 小時</p>
+          <p style="font-size:11px;color:#9A8F84;line-height:1.6;">含基礎保養，依款式計價，不含延甲・飾品</p>
         </div>
         <div class="svc-radio"></div>
       </div>
 
       <!-- 傳圖客製設計 -->
-      <div class="svc-card" onclick="selectService(this,'傳圖客製設計',2000,null)" data-name="傳圖客製設計" data-price="2000">
+      <div class="svc-card" onclick="selectService(this,'傳圖客製設計',1500,null)" data-name="傳圖客製設計" data-price="2000">
         <img src="care.jpg" class="svc-thumb" alt="傳圖客製設計" onerror="this.style.display='none'">
         <div style="flex:1;">
           <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;">
             <span style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;color:#2C2824;">傳圖客製設計</span>
-            <span class="price-tag">$2,000起</span>
+            <span class="price-tag">$1,500起</span>
           </div>
-          <p style="font-size:11px;color:#9A8F84;line-height:1.6;">含基礎保養・約 3 小時</p>
+          <p style="font-size:11px;color:#9A8F84;line-height:1.6;">依圖報價，延甲・飾品另計，最多三款為限</p>
         </div>
         <div class="svc-radio"></div>
       </div>
@@ -251,8 +251,8 @@
         </div>
 
         <div class="addon-card" onclick="toggleAddon(this,'延甲（每指）',150)">
-          <div><p style="font-size:13px;color:#2C2824;">延甲</p><p style="font-size:11px;color:#9A8F84;">$150/指，最多2指</p></div>
-          <div style="display:flex;align-items:center;gap:10px;"><span class="price-tag" style="font-size:15px;">+$150起</span><div class="addon-check"></div></div>
+          <div><p style="font-size:13px;color:#2C2824;">延甲</p><p style="font-size:11px;color:#9A8F84;">$100/指，最多3指</p></div>
+          <div style="display:flex;align-items:center;gap:10px;"><span class="price-tag" style="font-size:15px;">+$100起</span><div class="addon-check"></div></div>
         </div>
 
         <div class="addon-card" onclick="toggleAddon(this,'上翹甲/甲型彎曲',200)">
@@ -416,7 +416,7 @@
      ============================================================ -->
 <script>
 // ── GAS Webhook（同一個 GAS，doPost 處理兩種 action）
-const GAS_URL = 'https://script.google.com/macros/s/AKfycbyeI9X0gFMZREwQ-dinwJqlgUEx2dsNy_ZGMdW0RE3C7rjrrRBxR-KkXDM5uA_XWcx19A/exec';
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbyZ8tO3VuLU47KZovc537eP3oMAruYuoVTHY6i_GNfpfMS1uRDkEV8mwp2EAIlRHgczwA/exec';
 
 // ── 狀態 ──
 let state = {
