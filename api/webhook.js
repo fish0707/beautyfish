@@ -1,32 +1,43 @@
 /**
  * beauty fish｜Vercel Webhook API
- * 路徑：api/webhook.js
- * 接收 LINE Webhook → 轉發給 GAS doPost 處理
+ * Edge Runtime 版本 - 避免 timeout 問題
  */
+
+export const config = {
+  runtime: 'edge',
+};
 
 const GAS_URL = 'https://script.google.com/macros/s/AKfycbyeI9X0gFMZREwQ-dinwJqlgUEx2dsNy_ZGMdW0RE3C7rjrrRBxR-KkXDM5uA_XWcx19A/exec';
 
-export default async function handler(req, res) {
-  // 立刻回傳 200 給 LINE（必須，否則 LINE 會重試）
-  res.status(200).json({ success: true });
+export default async function handler(req) {
+  // 非 POST 直接回傳
+  if (req.method !== 'POST') {
+    return new Response(JSON.stringify({ success: true }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  }
 
   try {
-    if (req.method !== 'POST') return;
-    const body = req.body;
-    if (!body || !body.events) return;
+    const body = await req.json();
+    console.log('Webhook body:', JSON.stringify(body));
 
-    console.log('Webhook received events:', JSON.stringify(body.events));
-
-    // 把整個 LINE Webhook body 轉發給 GAS doPost
-    fetch(GAS_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body)
-    })
-    .then(r => r.text().then(t => console.log('GAS response:', t)))
-    .catch(err => console.error('GAS fetch error:', err));
-
+    if (body && body.events && body.events.length > 0) {
+      // 非同步轉發給 GAS，不等待回應
+      fetch(GAS_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+        signal: AbortSignal.timeout(4500)
+      }).catch(err => console.error('GAS error:', err.message));
+    }
   } catch (err) {
-    console.error('Webhook error:', err);
+    console.error('Webhook parse error:', err);
   }
+
+  // 立刻回傳 200 給 LINE
+  return new Response(JSON.stringify({ success: true }), {
+    status: 200,
+    headers: { 'Content-Type': 'application/json' }
+  });
 }
