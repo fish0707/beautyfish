@@ -146,90 +146,26 @@
   <div class="step-bar" id="stepBar">
     <div class="step-item">
       <div class="step-circle active" id="sc1">1</div>
-      <span class="step-label active" id="sl1">須知</span>
+      <span class="step-label active" id="sl1">服務</span>
     </div>
     <div class="step-line" id="line12"></div>
     <div class="step-item">
       <div class="step-circle pending" id="sc2">2</div>
-      <span class="step-label" id="sl2">服務</span>
+      <span class="step-label" id="sl2">時段</span>
     </div>
     <div class="step-line" id="line23"></div>
     <div class="step-item">
       <div class="step-circle pending" id="sc3">3</div>
-      <span class="step-label" id="sl3">時段</span>
+      <span class="step-label" id="sl3">資料</span>
     </div>
     <div class="step-line" id="line34"></div>
     <div class="step-item">
       <div class="step-circle pending" id="sc4">4</div>
-      <span class="step-label" id="sl4">資料</span>
-    </div>
-    <div class="step-line" id="line45"></div>
-    <div class="step-item">
-      <div class="step-circle pending" id="sc5">5</div>
-      <span class="step-label" id="sl5">確認</span>
+      <span class="step-label" id="sl4">確認</span>
     </div>
   </div>
 
-  <!-- ════ STEP 0（顯示為Step1）：預約須知 ════ -->
-  <div class="panel active" id="step1">
-    <div class="sec-title">預約須知</div>
-
-    <div style="background:linear-gradient(135deg,#F5EEE7,#EDE4D9);border-radius:16px;padding:20px;border:1px solid rgba(180,162,144,.3);margin-bottom:16px;">
-      <p style="font-size:12px;font-weight:600;color:#4A3F35;margin-bottom:14px;">保障雙方權益 請務必詳閱</p>
-
-      <div style="display:flex;flex-direction:column;gap:12px;">
-
-        <div style="display:flex;gap:10px;">
-          <span style="color:#6B5F54;font-size:13px;flex-shrink:0;">▸</span>
-          <p style="font-size:12px;color:#4A3F35;line-height:1.8;">送出預約視同已詳閱預約須知，並同意和接受。如有疑問可事前提出及討論，完成預約後一律以工作室的認知為基準。</p>
-        </div>
-
-        <div style="display:flex;gap:10px;">
-          <span style="color:#6B5F54;font-size:13px;flex-shrink:0;">▸</span>
-          <p style="font-size:12px;color:#4A3F35;line-height:1.8;">首次預約請上傳清晰的甲況照片至聊天室（無論素甲或有做指甲）。</p>
-        </div>
-
-        <div style="display:flex;gap:10px;">
-          <span style="color:#6B5F54;font-size:13px;flex-shrink:0;">▸</span>
-          <p style="font-size:12px;color:#4A3F35;line-height:1.8;">無特別提供單色色卡，如果想施作單色的女孩請於預約時一併告知想施作的顏色！</p>
-        </div>
-
-        <div style="display:flex;gap:10px;">
-          <span style="color:#6B5F54;font-size:13px;flex-shrink:0;">▸</span>
-          <p style="font-size:12px;color:#4A3F35;line-height:1.8;">支付方式：現金、網銀轉帳。</p>
-        </div>
-
-        <div style="display:flex;gap:10px;">
-          <span style="color:#6B5F54;font-size:13px;flex-shrink:0;">▸</span>
-          <p style="font-size:12px;color:#4A3F35;line-height:1.8;">施作時間視款式約 <strong>3–3.5 個小時</strong>左右不等，請保留充裕時間喲！</p>
-        </div>
-
-        <div style="display:flex;gap:10px;">
-          <span style="color:#6B5F54;font-size:13px;flex-shrink:0;">▸</span>
-          <p style="font-size:12px;color:#4A3F35;line-height:1.8;">客帶圖無法完全復刻，完美主義者請自行斟酌。</p>
-        </div>
-
-        <div style="display:flex;gap:10px;">
-          <span style="color:#6B5F54;font-size:13px;flex-shrink:0;">▸</span>
-          <p style="font-size:12px;color:#4A3F35;line-height:1.8;">未經提前至少 <strong>兩天</strong> 告知更改時段或遲到 10 分鐘者「視同取消」，累犯 2 次則不再提供服務，請確認時間再預約。</p>
-        </div>
-
-        <div style="display:flex;gap:10px;">
-          <span style="color:#6B5F54;font-size:13px;flex-shrink:0;">▸</span>
-          <p style="font-size:12px;color:#4A3F35;line-height:1.8;">如有不當言行、惡意挑戰工作室規範者，工作室有權即刻終止所有服務。</p>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- 同意勾選框 -->
-    <div style="background:#F9F8F6;border-radius:12px;padding:16px;border:1px solid rgba(212,203,192,.5);display:flex;align-items:center;gap:12px;cursor:pointer;" onclick="toggleAgree()" id="agreeBox">
-      <div id="agreeCheck" style="width:20px;height:20px;border-radius:4px;border:2px solid #D4CBC0;background:#fff;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.3s;"></div>
-      <p style="font-size:12px;color:#4A3F35;line-height:1.6;">我已詳閱並同意以上預約須知</p>
-    </div>
-  </div>
-
-  <!-- ════ STEP 2：服務選擇 ════ -->
+  <!-- ════ STEP 1：服務選擇 ════ -->
     <div class="sec-title">選擇服務</div>
 
     <div style="display:flex;flex-direction:column;gap:10px;" id="svcList">
@@ -340,8 +276,8 @@
     </div>
   </div>
 
-  <!-- ════ STEP 3：時段選擇 ════ -->
-  <div class="panel" id="step3">
+  <!-- ════ STEP 2：時段選擇 ════ -->
+  <div class="panel" id="step2">
     <div style="text-align:center;padding:20px 0 8px;">
       <div id="loadingSlots" style="display:none;">
         <div class="loading-spinner"></div>
@@ -382,8 +318,8 @@
     </div>
   </div>
 
-  <!-- ════ STEP 4：填寫資料 ════ -->
-  <div class="panel" id="step4">
+  <!-- ════ STEP 3：填寫資料 ════ -->
+  <div class="panel" id="step3">
     <div class="sec-title">填寫資料</div>
     <div style="display:flex;flex-direction:column;gap:16px;">
       <div>
@@ -414,8 +350,8 @@
     </div>
   </div>
 
-  <!-- ════ STEP 5：確認送出 ════ -->
-  <div class="panel" id="step5">
+  <!-- ════ STEP 4：確認送出 ════ -->
+  <div class="panel" id="step4">
     <div class="sec-title">確認預約</div>
 
     <div style="background:#F9F8F6;border-radius:12px;padding:18px;border:1px solid rgba(212,203,192,.6);margin-bottom:20px;">
@@ -534,7 +470,6 @@ const GAS_URL = 'https://script.google.com/macros/s/AKfycbyZ8tO3VuLU47KZovc537eP
 // ── 狀態 ──
 let state = {
   step: 1,
-  agreed: false,      // 是否同意須知
   service: null,      // { name, price, sub }
   addons: [],         // [{ name, price }]
   totalPrice: 0,
@@ -545,25 +480,6 @@ let state = {
   calYear: new Date().getFullYear(),
   calMonth: new Date().getMonth(), // 0-indexed
 };
-
-// ── 同意須知勾選 ──
-function toggleAgree() {
-  state.agreed = !state.agreed;
-  const check = document.getElementById('agreeCheck');
-  const box = document.getElementById('agreeBox');
-  if (state.agreed) {
-    check.style.background = '#6B5F54';
-    check.style.borderColor = '#6B5F54';
-    check.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>';
-    box.style.borderColor = '#6B5F54';
-  } else {
-    check.style.background = '#fff';
-    check.style.borderColor = '#D4CBC0';
-    check.innerHTML = '';
-    box.style.borderColor = 'rgba(212,203,192,.5)';
-  }
-  updateNextBtn();
-}
 
 // ── Toast ──
 function showToast(msg, duration=3000) {
@@ -576,14 +492,14 @@ function showToast(msg, duration=3000) {
 // ── Step UI ──
 function updateStepUI() {
   const step = state.step;
-  [1,2,3,4,5].forEach(i => {
+  [1,2,3,4].forEach(i => {
     const sc = document.getElementById('sc'+i);
     const sl = document.getElementById('sl'+i);
     if (!sc) return;
     sc.className = 'step-circle ' + (i < step ? 'done' : i === step ? 'active' : 'pending');
     sl.className = 'step-label' + (i === step ? ' active' : '');
   });
-  [12,23,34,45].forEach((pair,idx) => {
+  [12,23,34].forEach((pair,idx) => {
     const line = document.getElementById('line'+pair);
     if (!line) return;
     line.className = 'step-line' + (idx+1 < step ? ' done' : '');
@@ -597,7 +513,7 @@ function updateStepUI() {
   document.getElementById('btnBack').style.display = step > 1 ? 'block' : 'none';
 
   const btnNext = document.getElementById('btnNext');
-  if (step === 5) {
+  if (step === 4) {
     btnNext.textContent = '確認送出';
     btnNext.disabled = false;
   } else {
@@ -609,25 +525,23 @@ function updateStepUI() {
 function updateNextBtn() {
   const btn = document.getElementById('btnNext');
   const s = state.step;
-  if (s===1) btn.disabled = !state.agreed;
-  if (s===2) btn.disabled = !state.service || (state.service.sub === 'french' && !state.service.subSelected);
-  if (s===3) btn.disabled = !state.selDate || !state.selTime;
-  if (s===4) btn.disabled = false;
+  if (s===1) btn.disabled = !state.service || (state.service.sub === 'french' && !state.service.subSelected);
+  if (s===2) btn.disabled = !state.selDate || !state.selTime;
+  if (s===3) btn.disabled = false;
 }
 
 function goNext() {
-  if (state.step === 1 && !state.agreed) { showToast('請先同意預約須知'); return; }
-  if (state.step === 4) {
+  if (state.step === 3) {
     const name = document.getElementById('f_name').value.trim();
     const line = document.getElementById('f_line').value.trim();
     if (!name || !line) { showToast('請填寫姓名與 LINE ID'); return; }
   }
-  if (state.step === 5) { submitBooking(); return; }
-  if (state.step === 3 && !state.selTime) { showToast('請選擇預約時段'); return; }
-  if (state.step === 4) { buildSummary(); }
+  if (state.step === 4) { submitBooking(); return; }
+  if (state.step === 2 && !state.selTime) { showToast('請選擇預約時段'); return; }
+  if (state.step === 3) { buildSummary(); }
   state.step++;
-  if (state.step === 3) loadSlots();
-  if (state.step === 5) buildSummary();
+  if (state.step === 2) loadSlots();
+  if (state.step === 4) buildSummary();
   updateStepUI();
   window.scrollTo(0,0);
 }
