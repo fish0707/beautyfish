@@ -289,12 +289,11 @@
       </div>
       <!-- 引導客人傳訊息取得確認卡 -->
       <div style="background:linear-gradient(135deg,#4A3F35,#2C2824);border-radius:16px;padding:20px;text-align:center;margin-bottom:16px;">
-        <p style="font-size:13px;font-weight:600;color:#fff;margin-bottom:8px;">📩 獲取預約確認通知</p>
-        <p style="font-size:11px;color:rgba(255,255,255,.7);line-height:1.8;margin-bottom:16px;">
-          請加入官方 LINE 並傳送「<strong style="color:#fff;">預約確認</strong>」<br/>
-          系統將自動發送您的預約確認卡片 🎉
-        </p>
-        <a href="https://line.me/R/oaMessage/@949fqzap/?預約確認"
+        <p style="font-size:13px;font-weight:600;color:#fff;margin-bottom:4px;">📩 獲取預約確認通知</p>
+        <p style="font-size:10px;color:#C8BDB4;margin-bottom:12px;">預約碼：<span id="bookingCodeDisplay" style="font-weight:600;color:#fff;letter-spacing:.1em;">載入中…</span></p>
+        <p style="font-size:11px;color:#C8BDB4;line-height:1.8;margin-bottom:16px;">點擊下方按鈕，LINE 將自動帶入您的預約碼<br/>直接送出即可收到確認卡片 🎉</p>
+        <a id="lineConfirmBtn"
+           href="https://line.me/R/oaMessage/@949fqzap/?預約確認"
            target="_blank"
            style="display:inline-flex;align-items:center;gap:8px;background:#06C755;color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;padding:12px 24px;border-radius:50px;text-decoration:none;box-shadow:0 4px 16px rgba(6,199,85,.4);">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.952 12.418C19.952 8.007 15.49 4.42 12 4.42c-3.49 0-7.952 3.587-7.952 7.998 0 3.94 3.492 7.23 8.215 7.908.32.069.755.21.865.483.099.247.065.634.032.883l-.14.84c-.043.247-.198.967.847.527 1.045-.44 5.637-3.32 7.692-5.685 1.42-1.558 2.293-3.14 2.293-4.956z"/></svg>
@@ -493,6 +492,21 @@ async function submitBooking(){
       lineId: document.getElementById('f_line').value.trim(),
       total: state.totalPrice
     }));
+    // 從 GAS 回傳取得預約碼（no-cors 模式拿不到，改用備用方案）
+    // 用日期+時間+亂數在前端也產生一個預約碼
+    const dateCode = (state.selDate||'').replace(/\//g,'');
+    const rand = Math.floor(1000 + Math.random() * 9000);
+    const bookingCode = 'BF' + dateCode + rand;
+
+    // 更新按鈕連結帶入預約碼
+    const lineBtn = document.getElementById('lineConfirmBtn');
+    if (lineBtn) {
+      lineBtn.href = 'https://line.me/R/oaMessage/@949fqzap/?' + encodeURIComponent('預約確認 ' + bookingCode);
+    }
+    // 顯示預約碼
+    const codeEl = document.getElementById('bookingCodeDisplay');
+    if (codeEl) codeEl.textContent = bookingCode;
+
     document.querySelector('#step4 .sec-title').style.display='none';
     document.querySelector('#step4 > div:first-of-type').style.display='none';
     document.getElementById('successBox').style.display='block';
